@@ -2,10 +2,9 @@ import { Routes, Route } from "react-router-dom";
 import Home from "./page/Home";
 import History from "./page/History";
 import Email from "./page/Email";
-<<<<<<< HEAD
+
 import Hero from "./page/Hero"
-=======
->>>>>>> b0b8e22 (Update-code)
+
 // import "./App.css";
 // import Appp from './function/test.js'
 import SelectedOption from './function/test'
