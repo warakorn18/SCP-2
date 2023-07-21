@@ -1,0 +1,24 @@
+Form{
+    display: flex;
+    justify-content: center;
+    margin-top: 3%;
+}
+.form-label{
+    width: 30%;
+    margin-right: 5%;
+    margin-top: 1%;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+.input-send {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    width: 420px;
+}
+.table-history{
+    margin: 0;
+    margin: 4%;
+    text-align: center;
+}

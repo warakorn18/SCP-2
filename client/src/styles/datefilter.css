@@ -1,0 +1,27 @@
+.date-from{
+    margin:0;
+    margin: 0 5%;
+    
+}
+/* .form-text{
+    font-size: 24px;
+} */
+.Date{
+    margin: 0;
+    display:flex;
+    /* align-items: center; */
+    justify-content: center;
+}
+.select-Lot{
+    font-size: 18px;
+    height: 50px;
+    width: 30%;
+}
+.select{
+
+    margin:10% 5%;
+    width:90%;
+}
+.form-select{
+    text-align: center;
+}
