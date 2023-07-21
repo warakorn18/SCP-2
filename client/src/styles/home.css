@@ -1,12 +1,18 @@
 h2{
     font-weight: bold;
     margin:0;
-    margin:2% 8%;
-    font-size: 45px;
+    margin:2% 5%;
+    font-size: 43px;
     font-family:Arial, Helvetica, sans-serif;
     color:rgb(255, 0, 0);
 }
-
+.pagination{
+    margin:2% 3%;
+    
+}
+li.page-item.active{
+    background-color: aqua;
+}
 .teble-data{
     margin: 3%;
     text-align: center;
@@ -17,4 +23,8 @@ h2{
 } */
 .LineChart{
     margin-top:0;
+}
+.page-link {
+   color:red;
+
 }

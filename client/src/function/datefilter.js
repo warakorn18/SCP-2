@@ -6,6 +6,7 @@ import { DateRangePicker } from "react-date-range";
 import "react-date-range/dist/styles.css"; // main style file
 import "react-date-range/dist/theme/default.css"; // theme css file
 import Table from "react-bootstrap/esm/Table";
+
 import "../styles/datefilter.css";
 
 function App() {
@@ -40,16 +41,14 @@ function App() {
     endDate: endDate,
     key: "selection",
   };
+
   // --------------------select filter----------------------
-  const [countryValue, setCountryValue] = useState("")
-  const options = products.map((option) => {
-      return <option 
-                  key={option.id} 
-                  value={option.id} 
-                  selected={option.id === countryValue}>{option.cpk_lost}
-             </option>
-  })
-console.log(options);
+  const [countryValue, setCountryValue] = useState("");
+  const datateble = () => {
+    console.log("11111111");
+  };
+  console.log(countryValue);
+
   return (
     <div>
       <div className="Date">
@@ -57,32 +56,27 @@ console.log(options);
           <DateRangePicker ranges={[selectionRange]} onChange={handleSelect} />
         </ul>
         <div className="select-Lot">
-        
-
-          
-          <Form.Group  className="select" controlId="exampleForm.ControlInput1">
-            <Form.Label >Lot</Form.Label>
-            <Form.Select aria-label="Default select example"  onChange={(e) => setCountryValue(e.target.value)}>
-            <option>Open this select menu</option>
-            {data.map((val) => {
-          return(
-              <option>{val.cpk_lost}</option>
-              )
-        })}
+          <Form.Group className="select" controlId="exampleForm.ControlInput1">
+            <Form.Label>Lot</Form.Label>
+            <Form.Select
+              aria-label="Default select example"
+              onChange={(e) => setCountryValue(e.target.value)}
+            >
+              <option>Open this select menu</option>
+              {data.map((val) => {
+                return <option>{val.cpk_lost}</option>;
+              })}
             </Form.Select>
           </Form.Group>
-          <Form.Group  className="select" controlId="exampleForm.ControlInput1">
+          <Form.Group className="select" controlId="exampleForm.ControlInput1">
             <Form.Label>PartName</Form.Label>
             <Form.Select aria-label="Default select example">
               <option>Open this select menu</option>
               {data.map((val) => {
-          return(
-              <option>{val.partname}</option>
-              )
-        })}
+                return <option>{val.partname}</option>;
+              })}
             </Form.Select>
           </Form.Group>
-         
         </div>
       </div>
 
@@ -104,8 +98,8 @@ console.log(options);
             {products.map((product, index) => {
               let date = new Date(product["d"]);
               return (
-                <tr>
-                  <td>{index+1}</td>
+                <tr value={product.id} onClick={datateble}>
+                  <td>{index + 1}</td>
                   <td>{product["cpk_lost"]}</td>
                   <td>{product["partname"]}</td>
                   <td>{date.toLocaleDateString()}</td>
@@ -119,6 +113,7 @@ console.log(options);
           </tbody>
         </Table>
       </div>
+      
     </div>
   );
 }

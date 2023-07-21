@@ -42,15 +42,27 @@ const LineChart = () => {
     {
       label: "Front-Pos",
       backgroundColor: "rgb(255, 199, 132)",
-      borderColor: "rgb(255, 99, 135)",
+      borderColor: "rgb(05, 99, 135)",
       data: data.map((item) => item.cpk_front_pos),
     },
     {
         label: "Front-Width",
-        backgroundColor: "rgb(255, 50, 13)",
-        borderColor: "rgb(25, 99, 132)",
+        backgroundColor: "rgb(35, 150, 13)",
+        borderColor: "rgb(130, 199, 132)",
         data: data.map((item) => item.cpk_front_width),
       },
+      {
+        label: "Back-Pos",
+        backgroundColor: "rgb(215, 19, 132)",
+        borderColor: "rgb(255, 99, 13)",
+        data: data.map((item) => item.cpk_back_pos),
+      },
+      {
+          label: "Back-Width",
+          backgroundColor: "rgb(255, 50, 13)",
+          borderColor: "rgb(205, 99, 122)",
+          data: data.map((item) => item.cpk_back_width),
+        },
     ],
   });
 };

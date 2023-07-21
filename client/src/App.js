@@ -7,7 +7,6 @@ import Hero from "./page/Hero"
 
 // import "./App.css";
 // import Appp from './function/test.js'
-import SelectedOption from './function/test'
 
 function App() {
   return (

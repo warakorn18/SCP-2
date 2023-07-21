@@ -1,5 +1,5 @@
 import React from "react";
-import Master from "../Master";
+
 import { Link } from "react-router-dom";
 
 // react-bootstrap
@@ -15,7 +15,7 @@ import "./Hero.css";
 import chinjung1 from "../img/1281955.jpg";
 import chinjung2 from "../img/1281953.jpg";
 import chinjung3 from "../img/1281973.jpg";
-import arrow from "../img/arrow.png";
+
 
 const Hero = () => {
   return (
